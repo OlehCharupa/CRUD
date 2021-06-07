@@ -1,0 +1,167 @@
+.relative {
+  position: relative;
+}
+
+.container {
+  overflow: auto;
+  max-height: 560px;
+  padding-right: 10px;
+}
+.containerMin {
+  overflow: auto;
+  max-height: 300px;
+  padding-right: 10px;
+}
+.containerMin::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+.containerMin::-webkit-scrollbar-track,
+.container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.containerMin::-webkit-scrollbar-thumb,
+.container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+.item {
+  background: #ffffff;
+  border: 1px solid #d6d8e7;
+  border-radius: 16px;
+  width: calc((100% - (135px * 3)) / 4);
+  height: max-content;
+  box-shadow: 17px 4px 24px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.item:hover,
+.item:focus {
+  transform: scale(0.9);
+  box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.item:not(:nth-child(4n + 4)) {
+  margin-right: 135px;
+}
+.item:not(:nth-last-child(-n + 4)) {
+  margin-bottom: 60px;
+}
+.wrapperInfo {
+  padding: 30px 30px;
+}
+.name {
+  font-weight: 600;
+  font-size: 1.7em;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  margin-bottom: 20px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.gender,
+.birthdate,
+.city {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.7em;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wrapperButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #d6d8e7;
+}
+
+.btnEdit,
+.btnDelete {
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  text-align: center;
+  width: 50%;
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btnEdit {
+  border-right: 1px solid #d6d8e7;
+}
+.btnEdit::after {
+  content: url("./images/iconEdit.svg");
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+}
+.btnDelete::after {
+  content: url("./images/iconDelete.svg");
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+}
+
+.btnEdit:focus,
+.btnEdit:hover {
+  border-radius: 0 0 0 16px;
+
+  color: #ffffff;
+  background-color: #624af2;
+}
+.btnEdit:focus::after,
+.btnEdit:hover::after {
+  content: url("./images/iconEditHover.svg");
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+}
+.btnDelete:focus,
+.btnDelete:hover {
+  border-radius: 0 0 16px 0;
+
+  color: #ffffff;
+  background-color: #eb0055;
+}
+.btnDelete:focus::after,
+.btnDelete:hover::after {
+  content: url("./images/iconDeleteHover.svg");
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+}
+.item:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 57px 5px;
+  height: max-content;
+  cursor: pointer;
+}
+.createText {
+  font-weight: 400;
+  font-size: 1.4em;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  margin-top: 30px;
+  text-align: center;
+}

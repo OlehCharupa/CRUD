@@ -1,0 +1,49 @@
+.form {
+  width: 400px;
+  margin: 0 auto;
+}
+.wrapperInput {
+  margin-bottom: 25px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  color: #6e7191;
+}
+.input {
+  width: 250px;
+  font-size: 1.7em;
+  line-height: 1.42;
+  letter-spacing: 1px;
+  color: #14142b;
+  border: none;
+  border-bottom: 1px solid #14142b;
+}
+.wrapperRadio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  font-size: 1.7em;
+  line-height: 1.42;
+  letter-spacing: 1px;
+  color: #14142b;
+}
+.wrapperButton {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.iconSubmit,
+.iconClose {
+  background-color: #eff0f6;
+  border-radius: 9px;
+  border: none;
+  padding: 7px 38px;
+}

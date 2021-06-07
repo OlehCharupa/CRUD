@@ -1,0 +1,51 @@
+.header {
+  background: #f7f7fc;
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.04);
+  padding: 16px 0;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+.userName {
+  margin-left: 25px;
+  font-weight: 600;
+  font-size: 1.28em;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+}
+.navList {
+  display: flex;
+  align-items: center;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+}
+.navItem:not(:last-child) {
+  margin-right: 45px;
+}
+.icon {
+  margin-left: 8px;
+}
+.link {
+  font-weight: 400;
+  font-size: 1.28em;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  transition: transform 0.3s;
+}
+.link:hover,
+.link:focus {
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+.link_active {
+  text-decoration-line: underline;
+}

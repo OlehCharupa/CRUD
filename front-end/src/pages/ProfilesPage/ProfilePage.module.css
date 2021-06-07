@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 40px 0 5px 0;
+}
+.title {
+  font-weight: 400;
+  font-size: 2.57em;
+  line-height: 0.9;
+  letter-spacing: 1px;
+  color: #14142b;
+  margin-bottom: 30px;
+}

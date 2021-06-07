@@ -1,0 +1,77 @@
+.wrapperSection {
+  padding-top: 100px;
+}
+.title {
+  font-weight: 600;
+  font-size: 3.42em;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.form {
+  width: 400px;
+  margin: 0 auto;
+}
+.wrapperInput {
+  margin-bottom: 20px;
+}
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  color: #6e7191;
+}
+.input {
+  background-color: transparent;
+  width: 100%;
+  font-size: 1.7em;
+  line-height: 1.42;
+  letter-spacing: 1px;
+  color: #14142b;
+  border: none;
+  border-bottom: 1px solid #14142b;
+}
+.wrapperInputRole {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.inputRole {
+  display: inline-block;
+  margin-right: 12px;
+}
+.labelRole {
+  font-size: 1.7em;
+  line-height: 1.42;
+  letter-spacing: 1px;
+  color: #14142b;
+}
+.btnSubmit {
+  display: block;
+  background: #eff0f6;
+  border-radius: 12px;
+  align-items: center;
+  padding: 10px 25px;
+  font-size: 1.7em;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.redirect {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #eff0f6;
+  border-radius: 12px;
+  align-items: center;
+  padding: 10px 25px;
+  font-size: 1.7em;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+  color: #4e4b66;
+}
