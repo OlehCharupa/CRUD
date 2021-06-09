@@ -42,11 +42,11 @@ const EditUser = ({ toggleModal, user = "" }) => {
         <form onSubmit={submitHeandler} className={styles.form}>
             <div className={styles.wrapperInput}>
                 <label className={styles.label} htmlFor="name">user name:</label>
-                <input onChange={inputHendler} name="name" value={name} id="name" type="text" className={styles.input} />
+                <input required onChange={inputHendler} name="name" value={name} id="name" type="text" className={styles.input} />
             </div>
             <div className={styles.wrapperInput}>
                 <label className={styles.label} htmlFor="email">email:</label>
-                <input onChange={inputHendler} name="email" value={email} id="email" type="text" className={styles.input} />
+                <input required onChange={inputHendler} name="email" value={email} id="email" type="text" className={styles.input} />
             </div>
 
             <div className={styles.wrapperInput}>

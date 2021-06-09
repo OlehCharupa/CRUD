@@ -22,6 +22,15 @@
   color: #14142b;
   border: none;
   border-bottom: 1px solid #14142b;
+  outline: none;
+}
+.input:invalid {
+  border-bottom: 1px solid red;
+  outline: none;
+}
+
+.input:valid {
+  border-bottom: 1px solid #14142b;
 }
 .wrapperRadio {
   display: flex;

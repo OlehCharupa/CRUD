@@ -43,6 +43,7 @@ const Register = () => {
                             User Name
                         </label>
                         <input
+                            required
                             onChange={inputHeandler}
                             type="text"
                             name="name"
@@ -57,6 +58,7 @@ const Register = () => {
                             Email
                         </label>
                         <input
+                            required
                             onChange={inputHeandler}
                             type="email"
                             name="email"
@@ -71,6 +73,7 @@ const Register = () => {
                             Password
                         </label>
                         <input
+                            required
                             onChange={inputHeandler}
                             type="password"
                             name="password"

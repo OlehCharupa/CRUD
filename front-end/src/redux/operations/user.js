@@ -4,7 +4,7 @@ import { setErrorRequest, resetErrorRequest } from "../slice/errorRequest.js";
 import { setUser } from "../slice/user.js";
 import { setUsersState, editUserState, deleteUserState } from "../slice/allUsers.js"
 
-axios.defaults.baseURL = "http://localhost:5000"
+axios.defaults.baseURL = "https://crudco.herokuapp.com/"
 
 const token = {
     set(token) {
@@ -58,9 +58,8 @@ export const deleteUser = (id) => async (dispatch) => {
     try {
         dispatch(loaderOn())
         dispatch(resetErrorRequest())
-        await axios.delete(`/user/${id}`)
+        await axios.get(`/user/${id}`)
         dispatch(deleteUserState(id))
-        // dispatch(resetUsersState())
     } catch (error) {
         dispatch(setErrorRequest(error.message))
     } finally {

@@ -4,7 +4,7 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import { rootReducer } from "./slice/rootReducer"
 
 const persistConfig = {
-    key: "root",
+    key: "token",
     version: 1,
     storage,
     whitelist: ['token']

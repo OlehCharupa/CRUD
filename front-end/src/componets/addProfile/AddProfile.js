@@ -18,10 +18,12 @@ const AddProfile = ({ toggleModal, profile = "" }) => {
     const [data, setData] = useState(initialState)
     const { nameProfile, gender, birthdate, city } = data
     const dispatch = useDispatch()
+
     const inputHendler = ({ target }) => {
         const { name, value } = target
         setData((state) => ({ ...state, [name]: value }))
     }
+
     const submitHeandler = (e) => {
         e.preventDefault()
         if (profile === null) {
@@ -38,7 +40,7 @@ const AddProfile = ({ toggleModal, profile = "" }) => {
         <form onSubmit={submitHeandler} className={styles.form}>
             <div className={styles.wrapperInput}>
                 <label className={styles.label} htmlFor="nameProfile">name:</label>
-                <input onChange={inputHendler} name="nameProfile" value={nameProfile} id="nameProfile" type="text" className={styles.input} />
+                <input required onChange={inputHendler} name="nameProfile" value={nameProfile} id="nameProfile" type="text" className={styles.input} />
             </div>
             <div className={styles.wrapperInput}>
                 <p className={styles.label}>gender:</p>
@@ -55,11 +57,11 @@ female
             </div>
             <div className={styles.wrapperInput}>
                 <label className={styles.label} htmlFor="birthdate">birthdate:</label>
-                <input onChange={inputHendler} name="birthdate" value={birthdate} id="birthdate" type="text" className={styles.input} />
+                <input required onChange={inputHendler} name="birthdate" value={birthdate} id="birthdate" type="text" className={styles.input} placeholder="01.01.2021" pattern="^(0[0-9]|1[0-9]|2[0-9]|3[01])[\.\-](0[0-9]|1[0-2])[\.\-]\d{4}$" />
             </div>
             <div className={styles.wrapperInput}>
                 <label className={styles.label} htmlFor="city">city:</label>
-                <input onChange={inputHendler} name="city" value={city} id="city" type="text" className={styles.input} />
+                <input required onChange={inputHendler} name="city" value={city} id="city" type="text" className={styles.input} />
             </div>
             <div className={styles.wrapperButton}>
                 <button type="submit" className={styles.iconSubmit}>

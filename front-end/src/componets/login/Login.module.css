@@ -32,6 +32,15 @@
   border: none;
   border-bottom: 1px solid #14142b;
   background-color: transparent;
+  outline: none;
+}
+.input:invalid {
+  border-bottom: 1px solid red;
+  outline: none;
+}
+
+.input:valid {
+  border-bottom: 1px solid #14142b;
 }
 .btnSubmit {
   display: block;

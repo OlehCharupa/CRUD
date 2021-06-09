@@ -5,7 +5,7 @@ import { loaderOn, loaderOff } from "../slice/loader";
 import { resetToken, setToken } from "../slice/token";
 import { resetUser, setUser } from "../slice/user";
 
-axios.defaults.baseURL = "http://localhost:5000"
+axios.defaults.baseURL = "https://crudco.herokuapp.com/"
 
 const token = {
     set(token) {
@@ -34,7 +34,7 @@ export const loginOperations = (obj) => async (dispath) => {
         dispath(resetErrorRequest());
         dispath(loaderOn())
         const result = await axios.post("/auth/login", { ...obj });
-        token.set(result.data.accessToken)
+        // token.set(result.data.accessToken)
         dispath(setToken(result.data.accessToken))
         dispath(setUser(result.data.data))
     } catch (error) {
@@ -59,3 +59,14 @@ export const logOut = () => async (dispatch) => {
         dispatch(loaderOff())
     }
 }
+// export const refreshTokens = (id) => async (dispatch) => {
+//     try {
+//         const result = await axios.post("/auth/refresh", { ...id })
+//         token.set(result.accessToken)
+//         dispatch(setToken(result.accessToken))
+//     } catch (error) {
+//         dispatch(setErrorRequest())
+//     } finally {
+//         dispatch(loaderOff())
+//     }
+// }

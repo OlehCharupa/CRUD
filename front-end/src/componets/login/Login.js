@@ -42,6 +42,7 @@ const Login = () => {
                             Email
                         </label>
                         <input
+                            required
                             onChange={inputHeandler}
                             type="email"
                             name="email"
@@ -56,6 +57,7 @@ const Login = () => {
                             Password
                         </label>
                         <input
+                            required
                             onChange={inputHeandler}
                             type="password"
                             name="password"

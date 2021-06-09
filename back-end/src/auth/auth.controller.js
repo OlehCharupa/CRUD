@@ -39,10 +39,13 @@ export const login = async (req, res, next) => {
     }
 
     const accessToken = jwt.sign(
-        { id: user._id },
+        { uid: user._id },
         process.env.JWT_SECRET,
-        { expiresIn: process.env.JWT_ACCESS_EXPIRE_TIME }
-    )
+        {
+            expiresIn: process.env.JWT_ACCESS_EXPIRE_TIME,
+        }
+    );
+
 
     return UserModel.findOne({ email }).populate({
         path: "profiles",
@@ -66,8 +69,7 @@ export const login = async (req, res, next) => {
 }
 
 export const logout = async (req, res) => {
-    // const { userId }
-    req.user = null
+    req.user = null;
     return res.status(204).end()
 }
 
@@ -79,13 +81,17 @@ export const authorize = async (req, res, next) => {
         try {
             payload = jwt.verify(accessToken, process.env.JWT_SECRET)
         } catch (error) {
+            console.log(payload);
             return res.status(401).send({ message: "Unauthorized" })
         }
-        const user = await UserModel.findById(payload.id)
+        const user = await UserModel.findById(payload.uid)
+
         if (!user) {
             return res.status(404).send({ message: "Invalid user" })
         }
+
         req.user = user;
+
         next()
     } else return res.status(400).send({ message: "No token provided" })
 }

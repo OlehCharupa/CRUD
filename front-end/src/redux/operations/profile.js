@@ -3,7 +3,7 @@ import { setErrorRequest } from "../slice/errorRequest"
 import { loaderOn, loaderOff } from "../slice/loader";
 import { addProfileState, deleteProfileState, editProfileState } from "../slice/user"
 
-axios.defaults.baseURL = "http://localhost:5000"
+axios.defaults.baseURL = "https://crudco.herokuapp.com/"
 
 
 

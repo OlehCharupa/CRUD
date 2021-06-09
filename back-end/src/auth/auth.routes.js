@@ -1,6 +1,5 @@
 import express from "express";
 import Joi from "joi"
-// import mongoose from "mongoose"
 
 import { asyncWrapper } from "../helpers/asyncWrapper.js"
 import validate from "../helpers/validate.js"
@@ -20,6 +19,7 @@ const signInSchema = Joi.object({
     email: Joi.string().required(),
     password: Joi.string().required(),
 })
+
 
 router.post("/register", validate(signUpSchema), asyncWrapper(register))
 router.post("/login", validate(signInSchema), asyncWrapper(login))
