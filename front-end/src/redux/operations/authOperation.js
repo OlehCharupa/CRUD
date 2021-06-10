@@ -21,6 +21,7 @@ export const registrationOperations = (obj) => async (dispath) => {
         dispath(resetErrorRequest());
         dispath(loaderOn())
         await axios.post("/auth/register", { ...obj })
+        dispath(loginOperations({ email: obj.email, password: obj.password }))
     } catch (error) {
         dispath(setErrorRequest(error.message))
     }

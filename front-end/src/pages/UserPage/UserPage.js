@@ -8,7 +8,7 @@ import Modal from '../../componets/modal/Modal';
 import EditUser from '../../componets/editUser/EditUser';
 import { useHistory, useLocation } from 'react-router';
 import { deleteUser } from "../../redux/operations/user"
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { paths } from '../../routes/routes';
 
@@ -19,10 +19,19 @@ const UserPage = () => {
     const { name, email, role, _id, profiles } = data
     const [openModal, setOpenModal] = useState(false)
 
+    const isAdmin = useSelector(state => state.currentUser.role === "admin")
+    const history = useHistory()
     useEffect(() => {
-        setData(location.state.user)
+        if (!isAdmin) {
+            history.push("/profiles")
+        } else {
+            setData(location.state.user)
+        }
+    }, [isAdmin, history, location])
 
-    }, [location])
+    // useEffect(() => {
+
+    // }, [location])
 
     const toggleModal = () => {
         setOpenModal(!openModal)
